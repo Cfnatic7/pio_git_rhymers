@@ -10,7 +10,7 @@ class RhymersDemo {
     public static final int MAX_RAND_VALUE = 20;
 
     public static void main(String[] args) {
-        final Rhymersfactory factory = new DefaultRhymersFactory();
+        Rhymersfactory factory = new DefaultRhymersFactory();
 
         DefaultCountingOutRhymer[] rhymers = {factory.getStandardRhymer(), factory.getFalseRhymer(),
                 factory.getFIFORhymer(), factory.getHanoiRhymer()};
