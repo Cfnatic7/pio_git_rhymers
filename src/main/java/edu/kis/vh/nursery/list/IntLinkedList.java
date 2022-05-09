@@ -5,6 +5,8 @@ public class IntLinkedList {
 
 	private static final int EMPTY_LIST = -1;
 	private Node last;
+
+	//TODO: delete this attribute, it's unused
 	private int i;
 
 	// rozszerza listę o kolejny węzeł
