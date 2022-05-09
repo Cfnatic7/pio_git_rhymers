@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+// Klasa stanowi domyślną implementację stosu
 public class DefaultCountingOutRhymer {
 
     private static final int NUM_SIZE = 12;
@@ -8,30 +9,36 @@ public class DefaultCountingOutRhymer {
 
     private int total = NO_NUMS;
 
+    // zwraca indeks ostatniego położonego elementu na stosie
     public int getTotal() {
         return total;
     }
 
 
+    // odkłada element na stosie, gdy nie jest on wypełniony
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
+    // sprawdza czy stos jest pusty
     public boolean callCheck() {
         return total == NO_NUMS;
     }
 
+    // sprawdza czy stos jest pełny
     public boolean isFull() {
         return total == 11;
     }
 
+    // zwraca ostatnią położoną wartość na stosie, w przypadku gdy stos jest pusty zwraca NO_NUMS
     protected int peekaboo() {
         if (callCheck())
             return NO_NUMS;
         return numbers[total];
     }
 
+    // zwraca ostatnią położoną wartość na stosie i zrzuca ją ze stosu
     public int countOut() {
         if (callCheck())
             return NO_NUMS;
