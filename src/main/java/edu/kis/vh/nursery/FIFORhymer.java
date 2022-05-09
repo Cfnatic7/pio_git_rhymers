@@ -2,6 +2,7 @@ package edu.kis.vh.nursery;
 
 //Klasa implementuje stos typu FIFO, czyli kolejkę
 public class FIFORhymer extends DefaultCountingOutRhymer {
+    // TODO: change the name of this class to FIFOStack
 
     private DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 

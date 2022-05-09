@@ -6,6 +6,7 @@ import edu.kis.vh.nursery.HanoiRhymer;
 import edu.kis.vh.nursery.factory.Rhymersfactory;
 
 // Klasa jest fabryką stosów. Jej metody zwracają konkretne rodzaje stosów
+// TODO: apply the same changed that are listed int todos in Rhymersfactory
 public class DefaultRhymersFactory implements Rhymersfactory {
 
 	// implementacja funkcji zwracającej standardowy stos

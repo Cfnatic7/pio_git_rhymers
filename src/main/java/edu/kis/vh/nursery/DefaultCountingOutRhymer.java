@@ -2,6 +2,7 @@ package edu.kis.vh.nursery;
 
 // Klasa stanowi domyślną implementację stosu
 public class DefaultCountingOutRhymer {
+    // TODO: change the name of this class to defaultStack
 
     private static final int NUM_SIZE = 12;
 

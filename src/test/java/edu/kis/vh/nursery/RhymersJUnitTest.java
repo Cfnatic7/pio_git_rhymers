@@ -9,6 +9,7 @@ import org.junit.Test;
 Jest to klasa testująca implementację metod klasy DefaultCountingOutRhymer
 */
 public class RhymersJUnitTest {
+    // TODO: change the name of this class to StackUnitTest
 
     private static final int TEST_VALUE = 888;
 

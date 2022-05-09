@@ -5,6 +5,7 @@ package edu.kis.vh.nursery;
 // klasa HanoiRhymer jest typem stosu, który przyjmuje na swój wierzch tylko te wartości,
 // które są mniejsze lub równe od poprzedniej wartości
 public class HanoiRhymer extends DefaultCountingOutRhymer {
+    // TODO: change the name of this class to HanoiStack
 
     private int totalRejected = 0;
 
