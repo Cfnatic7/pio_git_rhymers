@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
+import edu.kis.vh.nursery.list.IntLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -92,4 +94,70 @@ public class RhymersJUnitTest {
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
     }
 
+    @Test
+    public void testReportRejected() {
+        HanoiRhymer hRhymer = new HanoiRhymer();
+        int firstValue = 3, secondValue = 7;
+        
+        hRhymer.countIn(firstValue);
+        hRhymer.countIn(secondValue);
+        Assert.assertEquals(1, hRhymer.reportRejected());
+    }
+
+    @Test
+    public void testCountInHanoiRhymer() {
+        FIFORhymer fifoRhymer = new FIFORhymer();
+        int firstValue = 3, secondValue = 7;
+
+        fifoRhymer.countIn(firstValue);
+        fifoRhymer.countIn(secondValue);
+        int result  = fifoRhymer.countOut();
+        Assert.assertEquals(firstValue, result);
+        result = fifoRhymer.countOut();
+        Assert.assertEquals(secondValue, result);
+    }
+
+    @Test
+    public void testDefaultRhymersFactory() {
+        DefaultRhymersFactory factory = new DefaultRhymersFactory();
+        Assert.assertTrue(factory.getFalseRhymer() instanceof DefaultCountingOutRhymer);
+        Assert.assertTrue(factory.getStandardRhymer() instanceof DefaultCountingOutRhymer);
+        Assert.assertTrue(factory.getFIFORhymer() instanceof FIFORhymer);
+        Assert.assertTrue(factory.getHanoiRhymer() instanceof HanoiRhymer);
+    }
+
+    @Test
+    public void testIsEmpty(){
+        IntLinkedList linkedList = new IntLinkedList();
+        Assert.assertTrue(linkedList.isEmpty());
+    }
+
+    @Test
+    public void testIsFullLL(){
+        IntLinkedList linkedList = new IntLinkedList();
+        Assert.assertFalse(linkedList.isFull());
+    }
+
+    @Test
+    public void testPush() {
+        IntLinkedList linkedList = new IntLinkedList();
+        linkedList.push(7);
+        Assert.assertFalse(linkedList.isEmpty());
+    }
+
+    @Test
+    public void testPop() {
+        IntLinkedList linkedList = new IntLinkedList();
+        linkedList.push(7);
+        Assert.assertEquals(7, linkedList.pop());
+        Assert.assertTrue(linkedList.isEmpty());
+    }
+
+    @Test
+    public void testTop(){
+        IntLinkedList linkedList = new IntLinkedList();
+        linkedList.push(7);
+        Assert.assertEquals(7, linkedList.top());
+        Assert.assertFalse(linkedList.isEmpty());
+    }
 }
