@@ -98,7 +98,7 @@ public class RhymersJUnitTest {
     public void testReportRejected() {
         HanoiRhymer hRhymer = new HanoiRhymer();
         int firstValue = 3, secondValue = 7;
-        
+
         hRhymer.countIn(firstValue);
         hRhymer.countIn(secondValue);
         Assert.assertEquals(1, hRhymer.reportRejected());
@@ -106,6 +106,7 @@ public class RhymersJUnitTest {
 
     @Test
     public void testCountInHanoiRhymer() {
+        // TODO: change method name to the one fitting the functionality of a stack
         FIFORhymer fifoRhymer = new FIFORhymer();
         int firstValue = 3, secondValue = 7;
 
@@ -119,6 +120,7 @@ public class RhymersJUnitTest {
 
     @Test
     public void testDefaultRhymersFactory() {
+        // TODO: change method name to the one fitting the functionality of a stack
         DefaultRhymersFactory factory = new DefaultRhymersFactory();
         Assert.assertTrue(factory.getFalseRhymer() instanceof DefaultCountingOutRhymer);
         Assert.assertTrue(factory.getStandardRhymer() instanceof DefaultCountingOutRhymer);
