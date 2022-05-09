@@ -3,12 +3,14 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.Rhymersfactory;
 
+// Klasa testuje implementację konkretnych odmian stosów
 class RhymersDemo {
 
     private static final int COUNT_IN_MAX_VALUE = 15;
     private static final int RHYMERS_MAX_VALUE = 3;
     private static final int MAX_RAND_VALUE = 20;
 
+    // funckcja main stanowi entry point programu
     public static void main(String[] args) {
         Rhymersfactory factory = new DefaultRhymersFactory();
 
@@ -16,6 +18,11 @@ class RhymersDemo {
 
     }
 
+    /* testuje implementację konkretnych typów stosu
+    * testuje 
+    *
+    *
+    * */
     private static void testRhymers(Rhymersfactory factory) {
         DefaultCountingOutRhymer[] rhymers = {factory.getStandardRhymer(), factory.getFalseRhymer(),
                 factory.getFIFORhymer(), factory.getHanoiRhymer()};

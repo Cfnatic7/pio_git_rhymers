@@ -4,10 +4,15 @@ import org.junit.Assert;
 import org.junit.Test;
 
 //wszystkie testy przechodzą poprawnie
+
+/*
+Jest to klasa testująca implementację metod klasy DefaultCountingOutRhymer
+*/
 public class RhymersJUnitTest {
 
     private static final int TEST_VALUE = 888;
 
+    // testuje odkładanie wartości na stos i zwracanie najwyższej wartości
     @Test
     public void testCountIn() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
@@ -18,6 +23,7 @@ public class RhymersJUnitTest {
         Assert.assertEquals(testValue, result);
     }
 
+    // testuje sprawdzanie czy stos jest pusty
     @Test
     public void testCallCheck() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
@@ -30,6 +36,7 @@ public class RhymersJUnitTest {
         Assert.assertEquals(false, result);
     }
 
+    // testuje sprawdzanie czy stos jest pełny
     @Test
     public void testIsFull() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
@@ -44,6 +51,7 @@ public class RhymersJUnitTest {
         Assert.assertEquals(true, result);
     }
 
+    // testuje zwracanie ostatniej położonej wartości na stosie i NO_NUMS gdy stos jest pusty
     @Test
     public void testPeekaboo() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
@@ -61,6 +69,7 @@ public class RhymersJUnitTest {
         Assert.assertEquals(testValue, result);
     }
 
+    // testuje zwracanie i usuwanie ostatniej położonej wartości na stosie
     @Test
     public void testCountOut() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
