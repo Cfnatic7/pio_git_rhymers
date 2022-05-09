@@ -1,29 +1,34 @@
 package edu.kis.vh.nursery.factory;
 
-import edu.kis.vh.nursery.defaultCountingOutRhymer;
+import edu.kis.vh.nursery.DefaultCountingOutRhymer;
 import edu.kis.vh.nursery.FIFORhymer;
 import edu.kis.vh.nursery.HanoiRhymer;
 import edu.kis.vh.nursery.factory.Rhymersfactory;
 
+// Klasa jest fabryką stosów. Jej metody zwracają konkretne rodzaje stosów
+// TODO: apply the same changed that are listed int todos in Rhymersfactory
 public class DefaultRhymersFactory implements Rhymersfactory {
 
+	// implementacja funkcji zwracającej standardowy stos
 	@Override
-	public defaultCountingOutRhymer GetStandardRhymer() {
-		return new defaultCountingOutRhymer();
+	public DefaultCountingOutRhymer getStandardRhymer() {
+		return new DefaultCountingOutRhymer();
 	}
 
+	// implementacja funkcji zwracającej standardowy stos
 	@Override
-	public defaultCountingOutRhymer GetFalseRhymer() {
-		return new defaultCountingOutRhymer();
+	public DefaultCountingOutRhymer getFalseRhymer() {
+		return new DefaultCountingOutRhymer();
 	}
 
+	// implementacja funkcji zwracającej kolejkę FIFO
 	@Override
-	public defaultCountingOutRhymer GetFIFORhymer() {
+	public DefaultCountingOutRhymer getFIFORhymer() {
 		return new FIFORhymer();
 	}
 
-	@Override
-	public defaultCountingOutRhymer GetHanoiRhymer() {
+	// implementacja funkcji zwracającej standardowy stos typu hanoi
+	public DefaultCountingOutRhymer getHanoiRhymer() {
 		return new HanoiRhymer();
 	}
 
