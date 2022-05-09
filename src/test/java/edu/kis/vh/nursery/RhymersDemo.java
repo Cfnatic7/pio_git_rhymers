@@ -5,7 +5,7 @@ import edu.kis.vh.nursery.factory.Rhymersfactory;
 
 // Klasa testuje implementację konkretnych odmian stosów
 class RhymersDemo {
-    // TODO: change the name of this class to StackDemo and similarly its attributes
+    // TODO: change the name of this class to StackDemo and similarly its attributes and method testRhymers
 
     private static final int COUNT_IN_MAX_VALUE = 15;
     private static final int RHYMERS_MAX_VALUE = 3;
