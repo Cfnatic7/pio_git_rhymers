@@ -31,12 +31,12 @@ public class RhymersJUnitTest {
         // TODO: change method name to the one fitting the functionality of a stack
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
         boolean result = rhymer.callCheck();
-        Assert.assertEquals(true, result);
+        Assert.assertTrue(result);
 
         rhymer.countIn(TEST_VALUE);
 
         result = rhymer.callCheck();
-        Assert.assertEquals(false, result);
+        Assert.assertFalse(result);
     }
 
     // testuje sprawdzanie czy stos jest pełny
@@ -46,12 +46,12 @@ public class RhymersJUnitTest {
         final int STACK_CAPACITY = 12;
         for (int i = 0; i < STACK_CAPACITY; i++) {
             boolean result = rhymer.isFull();
-            Assert.assertEquals(false, result);
+            Assert.assertFalse(result);
             rhymer.countIn(TEST_VALUE);
         }
 
         boolean result = rhymer.isFull();
-        Assert.assertEquals(true, result);
+        Assert.assertTrue(result);
     }
 
     // testuje zwracanie ostatniej położonej wartości na stosie i NO_NUMS gdy stos jest pusty
