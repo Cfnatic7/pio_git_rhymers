@@ -3,6 +3,7 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
+//wszystkie testy przechodzą poprawnie
 public class RhymersJUnitTest {
 
     private static final int TEST_VALUE = 888;
