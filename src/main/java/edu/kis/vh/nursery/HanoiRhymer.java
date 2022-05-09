@@ -16,6 +16,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
     // odkłada wartość na stosie, wtedy gdy dana wartość jest mniejsza lub równa od poprzedniej, lub gdy stos jest pusty
     @Override
     public void countIn(int in) {
+        // TODO: change method name to push
         if (!callCheck() && in > peekaboo())
             totalRejected++;
         else

@@ -8,6 +8,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     // odwraca ułożenie elementów na stosie i zwraca element na samej górze. Jest to implementacja FIFO (first in first out)
     @Override
     public int countOut() {
+        // TODO: change method name to pop
         while (!callCheck())
 
             rhymer.countIn(super.countOut());

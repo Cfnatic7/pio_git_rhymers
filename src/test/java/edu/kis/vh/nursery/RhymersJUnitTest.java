@@ -15,6 +15,7 @@ public class RhymersJUnitTest {
     // testuje odkładanie wartości na stos i zwracanie najwyższej wartości
     @Test
     public void testCountIn() {
+        // TODO: change method name to the one fitting the functionality of a stack
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
         int testValue = 4;
         rhymer.countIn(testValue);
@@ -26,6 +27,7 @@ public class RhymersJUnitTest {
     // testuje sprawdzanie czy stos jest pusty
     @Test
     public void testCallCheck() {
+        // TODO: change method name to the one fitting the functionality of a stack
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
         boolean result = rhymer.callCheck();
         Assert.assertEquals(true, result);
@@ -54,6 +56,7 @@ public class RhymersJUnitTest {
     // testuje zwracanie ostatniej położonej wartości na stosie i NO_NUMS gdy stos jest pusty
     @Test
     public void testPeekaboo() {
+        // TODO: change method name to the one fitting the functionality of a stack
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
         final int EMPTY_STACK_VALUE = -1;
 
@@ -72,6 +75,7 @@ public class RhymersJUnitTest {
     // testuje zwracanie i usuwanie ostatniej położonej wartości na stosie
     @Test
     public void testCountOut() {
+        // TODO: change method name to the one fitting the functionality of a stack
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
         final int EMPTY_STACK_VALUE = -1;
 
